@@ -19,7 +19,7 @@
         rgba(0, 128, 255, 0.5) 50%, 
         rgba(34, 0, 255, 0.5) 90%
     );
-    clip-path: var(--blue, circle(0%));
+    clip-path: var(--blue, circle(15%));
     z-index: -1;
 }
 
@@ -35,6 +35,6 @@
         rgba(150, 0, 255, 0.5) 50%, 
         rgba(200, 0, 255, 0.5) 90%
     );
-    clip-path: var(--purple, circle(0%));
+    clip-path: var(--purple, circle(10%));
     z-index: -1;
 }
