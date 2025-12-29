@@ -1,0 +1,40 @@
+.background {
+    background-color: #151515;
+    color: #eeeeee;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    max-width: 100%;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 187, 255, 0.5) 10%, 
+        rgba(0, 128, 255, 0.5) 50%, 
+        rgba(34, 0, 255, 0.5) 90%
+    );
+    clip-path: var(--blue, circle(0%));
+    z-index: -1;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+        rgba(100, 0, 255, 0.5) 10%, 
+        rgba(150, 0, 255, 0.5) 50%, 
+        rgba(200, 0, 255, 0.5) 90%
+    );
+    clip-path: var(--purple, circle(0%));
+    z-index: -1;
+}
