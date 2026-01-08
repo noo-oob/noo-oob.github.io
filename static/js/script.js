@@ -1,4 +1,4 @@
-window.ctimezone = "Asia/Seoul" // America/New_York
+window.ctimezone = "America/New_York" // America/New_York
 
 function convertTZ(date, tzString) {
     return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
@@ -47,8 +47,8 @@ if (background)
     function animatePolygons() {
         time += 0.0025;
 
-        background.style.setProperty('--blue', 'polygon('+(25+(Math.sin(time*15)*-5))+'% '+(50+(Math.sin(time*10)*5))+'%, '+(50+(Math.sin(time*7)*6))+'% '+(75+(Math.sin(time*8)*7))+'%, '+(75+(Math.sin(time*16)*3))+'% '+(50+(Math.sin(time*4)*-6))+'%, '+(50+(Math.sin(time*-9)*-6))+'% '+(25+(Math.cos(time*15)*-5))+'%)')
-        background.style.setProperty('--purple', 'polygon('+(40+(Math.sin(time*5)*-7))+'% '+(75+(Math.cos(time*6)*7))+'%, '+(60+(Math.cos(time*7)*-8))+'% '+(75+(Math.sin(time*8)*8))+'%, '+(75+(Math.cos(time*9)*-9))+'% '+(50+(Math.sin(time*10)*9))+'%, '+(50+(Math.cos(time*11)*-10))+'% '+(25+(Math.cos(time*12)*10))+'%, '+(25+(Math.sin(time*13)*-11))+'% '+(50+(Math.sin(time*14)*11))+'%)')
+        background.style.setProperty('--blue', 'circle('+(Math.cos(time*5)*7.5+7.5)+'%)')
+        background.style.setProperty('--purple', 'circle('+(Math.sin(time*7.5)*7.5+7.5)+'%)')
     
         animationId = requestAnimationFrame(animatePolygons);
     }
