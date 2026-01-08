@@ -7,6 +7,15 @@
     max-width: 100%;
 }
 
+.noeffectbackground {
+    background-color: #151515;
+    color: #eeeeee;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    max-width: 100%;
+}
+
 .background::before {
     content: '';
     position: absolute;
