@@ -2,16 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./static/css/style.css">
-        <title>Noob</title>
+        <link rel="stylesheet" href="./static/css/oneshot.css">
+        <title>The World Machine</title>
+        <link rel="icon" type="image/x-icon" href="./static/themeFiles/oneshotThemeFiles/other/thesun.ico">
     </head>
-    <body class="background">
-        <h1>About me</h1>
-        <p>INTJ-T</p>
-        <p id="time">Loading...</p>
-        <br>
-        <p>Links:</p>
-        <p><a href="https://noo-oob.github.io/tboi" style="color: #00a2ff;">Play TBOI here</a></p>
-    </body>
-    <script src="./static/js/script.js"></script>
+        <body class="background"> 
+            <div class="window" id="documentWindow" style="top: 200px; left: 400px;">
+                <p class="windowtitle" id="documentTitle">Documents</p>
+                <img src="./static/themeFiles/oneshotThemeFiles/apps/folder.png" class="windowicon">
+                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="documentX">
+                <div class="windowcontainer">
+                    <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="aboutmeopener" class="textfiledocuments" style="position:relative; left: 50px; top: 20px;">
+                    <p class="documentwindowtext" style="top: -15px; left: 20px;">aboutme.txt</p>
+                </div>
+                <div class="extrawindowcontainer" style="display: none;" id="documentExtraContainer"></div>
+            </div>
+
+            <div class="window" id="aboutmetextwindow" style="top: 300px; left: 450px;">
+                <p class="windowtitle" id="aboutmetitlebar">aboutme.txt</p>
+                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
+                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="aboutmeX">
+                <div class="windowcontainer">
+                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
+                        Hello!<br>
+                        I'm Noob, and I'm an INTJ-T.
+                    </p>
+                    <p class="windowtext" id="timezonetext" style="top: -50px; left: 20px; width: 660px;">
+                        My current timezone is GMT$timezone, and you can see the current time for me at the bottom right.
+                    </p>
+                    <p class="windowtext" style="top: -80px; left: 20px; width: 660px;">
+                        I'm still working on the website so expect an update soonish<br><br>
+                        by the way, the theme is inspired by oneshot<br>
+                        (specifically world edition)
+                    </p>
+                </div>
+                <div class="extrawindowcontainer" style="display: none;" id="aboutmeextracontainer"></div>
+            </div>
+
+            <div id='documentsApp'>
+                <p class='appText'>Documents</p>
+            </div>
+
+            <div id="bottombar">
+                <p id="time"></p>
+            </div>
+        </body>
+    <script src="./static/js/oneshot.js"></script>
 </html>

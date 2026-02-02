@@ -1,0 +1,165 @@
+/* cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/draghover.png'),grab;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/dragclick.png'),grabbing;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/block.png'),not-allowed;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/move.png'),move; */
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: auto;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    cursor: url(../themeFiles/oneshotThemeFiles/mouse/default.png),default;
+    margin: 0;
+    user-select: none;
+}
+
+.background {
+    background: var(--wallpaper, 'black');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:var(--wallpaperoffset, top 0px);
+    offset-position: 0px;
+    color: #eeeeee;
+    cursor: url(../themeFiles/oneshotThemeFiles/mouse/default.png),default;
+}
+
+@font-face {
+    font-family: "Terminus";
+    src: url(../themeFiles/oneshotThemeFiles/fonts/Terminus.ttf);
+}
+
+#bottombar {
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 3;
+    cursor: url(../themeFiles/oneshotThemeFiles/mouse/default.png),default;
+}
+
+#time {
+    height: 100%;
+    position: relative;
+    bottom: 10px;
+    color: #9665ff;
+    text-align: right;
+    font-family: "Terminus";
+    font-size: 30px;
+    padding-right: 25px;
+}
+
+#documentsApp {
+    background-image: url(../themeFiles/oneshotThemeFiles/apps/folder.png);
+    height: 96px;
+    width: 96px;
+    background-repeat: round;
+    position: fixed;
+    top: 32px;
+    left: 64px;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+}
+
+.appText {
+    position: relative;
+    top: 64px;
+    left: -20px;
+    font-family: "Terminus";
+    color: #9665ff;
+    text-align: center;
+    font-size: 32px;
+}
+
+.window {
+    position: absolute;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 700px;
+    height: 48px;
+    display: none;
+    z-index: 2;
+}
+
+.windowtitle {
+    color: #9665ff;
+    text-align: left;
+    font-family: "Terminus";
+    font-size: 30px;
+    position: relative;
+    top: -22px;
+    left: 60px;
+    width: 600px;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/draggable.png'),pointer;
+}
+
+.windowicon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -88px;
+    left: 10px;
+    z-index: -1;
+}
+
+.windowX {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -89px;
+    left: 612px;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+}
+
+.windowcontainer {
+    position: relative;
+    top: -80px;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 700px;
+    height: 500px;
+}
+
+.extrawindowcontainer {
+    position: relative;
+    top: -640px;
+    width: 700px;
+    height: 100px;
+    z-index: -1;
+}
+
+.textfiledocuments {
+    width: 100px;
+    height: 100px;
+    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+}
+
+.documentwindowtext {
+    position: relative;
+    font-family: "Terminus";
+    color:#9665ff;
+    font-size: 30px;
+}
+
+.windowtext {
+    position: relative;
+    font-family: "Terminus";
+    color:#9665ff;
+    font-size: 30px;
+    display: inline-block;
+}
