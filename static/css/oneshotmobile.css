@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Terminus";
+    src: url(../themeFiles/oneshotThemeFiles/fonts/Terminus.ttf);
+}
+
+html, body {
+    font-family: "Terminus";
+    text-align: center;
+    font-size: 2em;
+    image-rendering: pixelated;
+    display: grid;
+    place-items: center;
+    color: #9665ff;
+}
+
+.background {
+    background: black;
+    color: #9665ff;
+}
+
+.textwindow {
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 9em;
+    height: 10em;
+    z-index: 2;
+}
+
+.textwindow::before {
+    position: relative;
+    display: inline-block;
+    content: '';
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 100%;
+    height: 1em;
+    z-index: 3;
+    background-image: url(../themeFiles/oneshotThemeFiles/apps/doc.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+}
+
+.windowtitle {
+    font-size: 0.6em;
+    text-align: left;
+    position: relative;
+    display: block;
+    top: -2.75em;
+    left: 1.8em;
+    z-index: 4;
+}
+
+.windowtext {
+    font-size: 0.5em;
+    text-align: left;
+    position: relative;
+    display: block;
+    top: -3.5em;
+    left: 3%;
+    width: 94%;
+}

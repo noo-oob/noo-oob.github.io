@@ -20,10 +20,11 @@ html, body {
     cursor: url(../themeFiles/oneshotThemeFiles/mouse/default.png),default;
     margin: 0;
     user-select: none;
+    image-rendering: auto;
 }
 
 .background {
-    background: var(--wallpaper, 'black');
+    background: var(--wallpaper, black);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y:var(--wallpaperoffset, top 0px);
@@ -69,7 +70,7 @@ html, body {
     position: fixed;
     top: 32px;
     left: 64px;
-    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+    cursor:url(../themeFiles/oneshotThemeFiles/mouse/hover.png),pointer;
 }
 
 .appText {
@@ -103,7 +104,7 @@ html, body {
     top: -22px;
     left: 60px;
     width: 600px;
-    cursor:url('../themeFiles/oneshotThemeFiles/mouse/draggable.png'),pointer;
+    cursor:url(../themeFiles/oneshotThemeFiles/mouse/draggable.png),pointer;
 }
 
 .windowicon {
@@ -121,7 +122,7 @@ html, body {
     height: 40px;
     top: -89px;
     left: 612px;
-    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+    cursor:url(../themeFiles/oneshotThemeFiles/mouse/hover.png),pointer;
 }
 
 .windowcontainer {
@@ -135,6 +136,21 @@ html, body {
     height: 500px;
 }
 
+.windowfilecontainer {
+    position: relative;
+    top: -80px;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 700px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(4, 160px);
+    gap: 20px;
+}
+
 .extrawindowcontainer {
     position: relative;
     top: -640px;
@@ -143,17 +159,32 @@ html, body {
     z-index: -1;
 }
 
+.filecontainer {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 2fr, 2fr;
+}
+
 .textfiledocuments {
     width: 100px;
     height: 100px;
-    cursor:url('../themeFiles/oneshotThemeFiles/mouse/hover.png'),pointer;
+    cursor:url(../themeFiles/oneshotThemeFiles/mouse/hover.png),pointer;
+    text-align: center;
+    position: relative;
+    top: 15px;
 }
 
 .documentwindowtext {
-    position: relative;
     font-family: "Terminus";
     color:#9665ff;
-    font-size: 30px;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    word-break: break-all;
+    position: relative;
+    top: -15px;
 }
 
 .windowtext {
@@ -162,4 +193,21 @@ html, body {
     color:#9665ff;
     font-size: 30px;
     display: inline-block;
+}
+
+.button {
+    position: relative;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: #9665ff;
+    background-color: black;
+    width: 200px;
+    height: 100px;
+    font-family: "Terminus";
+    color: #9665ff;
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    cursor:url(../themeFiles/oneshotThemeFiles/mouse/hover.png),pointer;
 }

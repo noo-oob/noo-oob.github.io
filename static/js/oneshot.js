@@ -3,7 +3,37 @@ function getCookie(name) {
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
-    
+
+function isMobile() {
+    if (/Mobi/i.test(window.navigator.userAgent)){
+        return true
+    }
+
+    if (localStorage.mobile) {
+        return true
+    }
+
+    var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile']; 
+    for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+
+    return false
+}
+
+if (isMobile()){
+    var mobilewindow = document.getElementById('isMobileWindow')
+    var mobileyes = document.getElementById('isMobileYes')
+    var mobileno = document.getElementById('isMobileNo')
+
+    mobilewindow.style.display = 'block'
+
+    mobileno.onclick = function(){
+        document.getElementById('isMobileWindow').remove()
+    }
+}
+else{
+    document.getElementById('isMobileWindow').remove()
+}
+
 window.ctimezone = "America/New_York" // America/New_York
 
 function convertTZ(date, tzString) {
@@ -72,7 +102,12 @@ function timeupdatefunction() {
         doubledigit = true
     }
 
-    ctime = ctime[0]+':'+ctime[1]+' '+ctime[2].split(' ')[1]
+    var ends = ctime[2].split(' ')[1]
+
+    ctime = ctime[0]+':'+ctime[1]
+    if (ends){
+        ctime += ' '+ends
+    }
     
     if (!doubledigit){
         ctime = '0' + ctime
@@ -144,37 +179,43 @@ documentTitleBar.onmouseup = function(){
     }
 }
 
-// aboutme.txt
-aboutmetxtopener = document.getElementById('aboutmeopener')
-aboutmeWindow = document.getElementById('aboutmetextwindow')
-aboutmeX = document.getElementById('aboutmeX')
-aboutmeTitleBar = document.getElementById('aboutmetitlebar')
-aboutmeExtraContainer = document.getElementById('aboutmeextracontainer')
+// text files
+function setUpText(nameoffile, index, array){
+    let txtopener = document.getElementById(nameoffile+'opener')
+    let txtWindow = document.getElementById(nameoffile+'textwindow')
+    let txtX = document.getElementById(nameoffile+'X')
+    let txtTitleBar = document.getElementById(nameoffile+'titlebar')
+    let txtExtraContainer = document.getElementById(nameoffile+'extracontainer')
 
-aboutmetxtopener.onclick = function(){
-    aboutmeWindow.style.display = 'block'
-};
+    txtopener.onclick = function(){
+        txtWindow.style.display = 'block'
+    };
 
-aboutmeX.onclick = function(){
-    aboutmeWindow.style.display = 'none'
-};
+    txtX.onclick = function(){
+        txtWindow.style.display = 'none'
+    };
 
-aboutmeTitleBar.onmousedown = function(){
-    if (!currentdragging){
-        offsetx = parseInt(aboutmeWindow.style.left, 10) - mx
-        offsety = parseInt(aboutmeWindow.style.top, 10) - my
-        currentdragging = aboutmeWindow
-        aboutmeTitleBar.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/dragging.png'), pointer";
-        document.body.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/dragging.png'), pointer";
-        aboutmeExtraContainer.style = 'top: -800px; left: -125px; width: 950px; height: 500px;' 
-    }
-};
+    txtTitleBar.onmousedown = function(){
+        if (!currentdragging){
+            offsetx = parseInt(txtWindow.style.left, 10) - mx
+            offsety = parseInt(txtWindow.style.top, 10) - my
+            currentdragging = txtWindow
+            txtTitleBar.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/dragging.png'), pointer";
+            document.body.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/dragging.png'), pointer";
+            txtExtraContainer.style = 'top: -800px; left: -125px; width: 950px; height: 500px;' 
+        }
+    };
 
-aboutmeTitleBar.onmouseup = function(){
-    if (currentdragging = aboutmeWindow){
-        currentdragging = null
-        aboutmeTitleBar.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/draggable.png'), pointer";
-        document.body.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/default.png'), pointer";
-        aboutmeExtraContainer.style = 'top: -640px; width: 700px; height: 100px; z-index: -1;'
+    txtTitleBar.onmouseup = function(){
+        if (currentdragging = txtWindow){
+            currentdragging = null
+            txtTitleBar.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/draggable.png'), pointer";
+            document.body.style.cursor = "url('./static/themeFiles/oneshotThemeFiles/mouse/default.png'), pointer";
+            txtExtraContainer.style = 'top: -640px; width: 700px; height: 100px; z-index: -1;'
+        }
     }
 }
+
+const textfiles = ['aboutme', 'myexperience', 'myprojects', 'gamesiplay', 'contactme']
+textfiles.forEach(setUpText)
+
