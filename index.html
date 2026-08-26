@@ -2,131 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./static/css/oneshot.css">
-        <title>The World Machine</title>
-        <link rel="icon" type="image/x-icon" href="./static/themeFiles/oneshotThemeFiles/other/thesun.ico">
+        <link rel="stylesheet" href="./static/css/deltarune.css">
+        <title>* Well, there is a page here.</title>
+        <link rel="icon" type="image/x-icon" href="./static/themeFiles/deltaruneThemeFiles/other/tree.ico">
     </head>
-        <body class="background">
-            <div class="window" id="isMobileWindow" style="top: calc(35% - 37.5px); left: 10%; width: 80%; height: 400px; cursor: url(./static/themeFiles/oneshotThemeFiles/mouse/default.png),default;">
-                <p class="windowtitle" id="isMobileTitle" style="cursor: url(./static/themeFiles/oneshotThemeFiles/mouse/default.png),default">Prompt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/other/question.png" class="windowicon">
-                <div class="windowcontainer" style="left: 0%; width: 100%; height: 100%;">
-                    <p class="windowtext" style="top: 20px; text-align: center; width: 100%; font-size: 40px;">Are you on mobile?</p>
-                    <a href="mobile.html"><div class="button" style="top: 100px; width: 20%; height: 100px; left: 15%; display: inline-block; justify-content: center;" id="isMobileYes">Yes</div></a>
-                    <div class="button" style="top: 100px; width: 20%; height: 100px; left: 45%; display: inline-block; justify-content: center;" id="isMobileNo">No</div>
-                </div>
-            </div>
 
-            <div class="window" id="documentWindow" style="top: 200px; left: 400px;">
-                <p class="windowtitle" id="documentTitle">Documents</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/folder.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="documentX">
-                <div class="windowfilecontainer">
-                    <div class="filecontainer">
-                        <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="aboutmeopener" class="textfiledocuments">
-                        <p class="documentwindowtext">aboutme.txt</p>
-                    </div>
-                    <div class="filecontainer">
-                        <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="myexperienceopener" class="textfiledocuments">
-                        <p class="documentwindowtext">myexperience.txt</p>
-                    </div>
-                    <div class="filecontainer">
-                        <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="myprojectsopener" class="textfiledocuments">
-                        <p class="documentwindowtext">myprojects.txt</p>
-                    </div>
-                    <div class="filecontainer">
-                        <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="gamesiplayopener" class="textfiledocuments">
-                        <p class="documentwindowtext">gamesiplay.txt</p>
-                    </div>
-                    <div class="filecontainer">
-                        <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" id="contactmeopener" class="textfiledocuments">
-                        <p class="documentwindowtext">contactme.txt</p>
-                    </div>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="documentExtraContainer"></div>
-            </div>
+    <audio loop src="./static/themeFiles/deltaruneThemeFiles/audio/manpiano.ogg" type="audio/ogg" id="manpianoaudio"></audio>
+    
+    <body class="background">
+        <div class="center">
+            <a onclick="document.getElementById('manpianoaudio').play();">
+                <img src="./static/themeFiles/deltaruneThemeFiles/images/tree.gif" id="tree">
+            </a>
+        </div>
+    </body>
 
-            <div class="window" id="aboutmetextwindow" style="top: 300px; left: 450px;">
-                <p class="windowtitle" id="aboutmetitlebar">aboutme.txt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="aboutmeX">
-                <div class="windowcontainer">
-                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
-                        Hello!<br>
-                        I'm Noob, and I'm an INTJ-T.
-                    </p>
-                    <p class="windowtext" id="timezonetext" style="top: -50px; left: 20px; width: 660px;">
-                        My current timezone is GMT$timezone, and you can see the current time for me at the bottom right.
-                    </p>
-                    <p class="windowtext" style="top: -80px; left: 20px; width: 660px;">
-                        I make projects for fun, and also play games.
-                    </p>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="aboutmeextracontainer"></div>
-            </div>
-
-            <div class="window" id="myexperiencetextwindow" style="top: 250px; left: 300px;">
-                <p class="windowtitle" id="myexperiencetitlebar">myexperience.txt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="myexperienceX">
-                <div class="windowcontainer">
-                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
-                        I mainly code, and I don't have much experience with making art or music, though I sometimes mess around with FL Studio for fun, and sometimes make pixel art in aseprite, but nothing that's actual experience.<br><br>
-                        For coding, I have experience with using Python, Lua, Godot, and Javascript.<br><br>
-                    </p>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="myexperienceextracontainer"></div>
-            </div>
-
-            <div class="window" id="myprojectstextwindow" style="top: 250px; left: 300px;">
-                <p class="windowtitle" id="myprojectstitlebar">myprojects.txt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="myprojectsX">
-                <div class="windowcontainer">
-                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
-                        Right now, I don't have any projects that I'm done with (besides this website), but I have made a few random games on Roblox.<br><br>
-                        Currently, I'm working on Rich Rick Portal Adventure, which is a platformer with some bosses and other mechanics.
-                    </p>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="myprojectsextracontainer"></div>
-            </div>
-            
-            <div class="window" id="gamesiplaytextwindow" style="top: 250px; left: 300px;">
-                <p class="windowtitle" id="gamesiplaytitlebar">gamesiplay.txt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="gamesiplayX">
-                <div class="windowcontainer">
-                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
-                        I mainly play games on Steam. You can check out my profile <a href="https://steamcommunity.com/profiles/76561199439634557/" style="color: #9665ff;">here</a>.<br><br>
-                        Some of my favorite games are Celeste, Terraria, Hollow Knight, Hollow Knight Silksong, Undertale, Deltarune, Balatro, Stardew Valley, Oneshot, Omori, and The Binding of Isaac.
-                    </p>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="gamesiplayextracontainer"></div>
-            </div>
-
-            <div class="window" id="contactmetextwindow" style="top: 250px; left: 300px;">
-                <p class="windowtitle" id="contactmetitlebar">contactme.txt</p>
-                <img src="./static/themeFiles/oneshotThemeFiles/apps/doc.png" class="windowicon">
-                <img src="./static/themeFiles/oneshotThemeFiles/other/x.png" class="windowX" id="contactmeX">
-                <div class="windowcontainer">
-                    <p class="windowtext" style="top: -10px; left: 20px; width: 660px;">
-                        I mainly use Discord and Steam, but I'll put other contacts here too.<br><br>
-                        Discord: noo.oob<br>
-                        Steam: <a href="https://steamcommunity.com/profiles/76561199439634557/" style="color: #9665ff;">Noob</a><br>
-                        Youtube: <a href="https://www.youtube.com/@noo_oob/" style="color: #9665ff;">noo_oob</a><br>
-                        Github: <a href="https://github.com/noo-oob" style="color: #9665ff;">noo-oob</a>
-                    </p>
-                </div>
-                <div class="extrawindowcontainer" style="display: none;" id="contactmeextracontainer"></div>
-            </div>
-
-            <div id='documentsApp'>
-                <p class='appText'>Documents</p>
-            </div>
-
-            <div id="bottombar">
-                <p id="time"></p>
-            </div>
-        </body>
-    <script src="./static/js/oneshot.js"></script>
+    <script>
+        console.log("i will add more pages later (like deltarune's secret pages) but i dont like the old default page");
+    </script>
 </html>
