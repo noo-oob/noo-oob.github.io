@@ -7,17 +7,13 @@
         <link rel="icon" type="image/x-icon" href="./static/themeFiles/deltaruneThemeFiles/other/tree.ico">
     </head>
 
-    <audio loop src="./static/themeFiles/deltaruneThemeFiles/audio/manpiano.ogg" type="audio/ogg" id="manpianoaudio"></audio>
-    
+    <audio src="./media/dogbark.mp3" type="audio/mp3" id="dogbarkaudio"></audio>
+
     <body class="background">
         <div class="center">
-            <a onclick="document.getElementById('manpianoaudio').play();">
-                <img src="./static/themeFiles/deltaruneThemeFiles/images/tree.gif" id="tree">
-            </a>
+            <img src="./static/themeFiles/deltaruneThemeFiles/images/tree.gif" id="tree">
+            <img src="./media/dog.gif" style="position:absolute; top:-73; left:-100; opacity:0; cursor:pointer;" class="unselectable" id="dog">
         </div>
     </body>
-
-    <script>
-        console.log("i will add more pages later (like deltarune's secret pages) but i dont like the old default page");
-    </script>
+    <script src="./static/js/deltarune.js"></script>
 </html>
